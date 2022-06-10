@@ -40,13 +40,27 @@
             <div class="mb-3 mt-3">
               <div class="form-check">
                 <input class="form-input" type="checkbox" id="check1" name="option1" value="something" unchecked>
-                <label class="form-label">Marque la casilla si Su Mascota No Tiene Chip</label>
+                <label class="form-label">Mi mascota NO tiene Chip</label>
               </div>
+              <label class="form-label">Ingrese último lugar donde se vío</label>
+              <input type="text" class="form-control" placeholder="Direccion" required>
+              <div class="invalid-feedback">Por favor ingrese dirección</div>
+
               <br>
-             
+
+              <div class="form-group">
+                <label for="docs">Foto de tu Mascota</label>
+                <input type="file" name="docs" id="docs" />
+              </div>
+             <p></p>
+             <div class="d-grid">
+              <button class="btn btn-danger btn-block" type="submit" onclick="alert('Solo el propietario puede volver a cambiar el estado de su mascota, una vez enviado este informe su mascota cambia a Extraviada.');">
+                Publicar aviso de Extravio
+              </button>
+             <p></p>
             <br>
             <div class="d-grid">
-              <a href="HomeCliente.html" type="button" class="btn btn-primary btn-block">Regresar</a>
+              <a href="HomeCliente.html" type="button" class="btn btn-secondary btn-block">Regresar</a>
             </div>
 
           </form>
