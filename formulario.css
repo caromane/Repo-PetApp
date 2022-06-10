@@ -49,6 +49,10 @@ input, select, textarea, button {
     margin-bottom: 0.2em;
     display: block;
 }
+vanilla-form textarea {
+    height: 200px;
+    resize: vertical;
+}
 
 /* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
 fieldset.grupo .campo {
