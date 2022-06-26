@@ -15,37 +15,42 @@
       <body>
         <div class="container mt-3">  
           <form class="was-validated">
-            <h2>Registro de Mascota</h2>
+            <h2>Registro de Paseo de tu Mascota</h2>
             <img class="img-fluid mx-auto d-block" src="petapp.jpg" alt="petapp">
             <div class="mb-3 mt-3">
               <label class="form-label">Nombre Mascota</label>
               <input type="text" class="form-control" placeholder="ingrese El Nombre de su Mascota" required>
               <div class="invalid-feedback">Por favor ingrese El Nombre.</div>
             </div>
-            <div class="mb-3 mt-3">
-              <label class="form-label">Tipo De Mascota</label>
-              <input type="text" class="form-control" placeholder="ingrese El Tipo De Mascota" required>
-              <div class="invalid-feedback">Por favor ingrese el Tipo De Mascota.</div>
-            </div>
-            <div class="mb-3 mt-3">
-              <label class="form-label">Color</label>
-              <input type="text" class="form-control" placeholder="ingrese su Color" required>
-              <div class="invalid-feedback">Por favor ingrese su Color.</div>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">N° de Chip</label>
-              <input type="text" class="form" placeholder="Ingrese El N° de Chip">
-              <div ></div>
-            </div>
-            <div class="mb-3 mt-3">
-              <div class="form-check">
-                <input class="form-input" type="checkbox" id="check1" name="option1" value="something" unchecked>
-                <label class="form-label">Marque la casilla si su Mascota NO tiene Chip</label>
-              </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3329.040112602215!2d-70.65535979927105!3d-33.44826145469155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x9662c507f91be917%3A0xcfac72a68dd4b986!2sDuoc%20UC%20-%20Sede%20Padre%20Alonso%20de%20Ovalle%20-%20Padre%20Alonso%20de%20Ovalle%2C%20Santiago!3m2!1d-33.4472824!2d-70.6575998!4m5!1s0x9662c5d8539f7dfd%3A0x5e861538868e30b1!2sEleuterio%20Ram%C3%ADrez%20926%2C%20Santiago%2C%208330412%2C%20Regi%C3%B3n%20Metropolitana!3m2!1d-33.4489788!2d-70.6487317!5e0!3m2!1ses-419!2scl!4v1656270974692!5m2!1ses-419!2scl" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+            <form>
+
+              <fieldset>
+               <legend>Información Personal</legend>
+               Nombre: <input name='nombre' type='text' tabindex='1'>
+               Apellidos: <input name='apellidos' type='text' tabindex='2'>
+              </fieldset>
+             
+              <fieldset>
+               <legend>edad</legend>
+               <input type='checkbox' tabindex='20'
+                         name='edad' value='20-39' > 20-39
+               <input type='checkbox' tabindex='21'
+                         name='edad' value='40-59' > 40-59
+               <input type='checkbox' tabindex='22'
+                         name='edad' value='60-79' > 60-79
+              </fieldset>
+             
+             </form>
+            
+  
               <br>
               <div class="d-grid">
-                <button class="btn btn-success btn-block" type="submit" onclick="alert('Mascota Registrada Exitosamente');">
-                  Registrar Mascota
+                <button class="btn btn-success btn-block" type="submit" onclick="alert('Paseo Compartido');">
+                  Compartir paseo
                 </button>
             </div>
             <br>
