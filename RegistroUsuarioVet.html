@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            body {
+              background-image: url("5-imagen-perro-fondo.png");
+              background-size: auto 800px;            }
+        </style>
+      </head>
+      <body>
+        <div class="container mt-3">  
+          <form class="was-validated">
+            <h2>Registro de usuario</h2>
+            <img class="img-fluid mx-auto d-block" src="logo-sin-eslogan.png" alt="petapp">
+            <div class="mb-3 mt-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" placeholder="ingrese su Nombre" required>
+              <div class="invalid-feedback">Por favor ingrese el Nombre.</div>
+            </div>
+            <div class="mb-3 mt-3">
+              <label class="form-label">RUT</label>
+              <input type="text" class="form-control" placeholder="ingrese su RUT" required>
+              <div class="invalid-feedback">Por favor ingrese el RUT.</div>
+            </div>
+            <select class="form-select">
+              <option>Genero</option>
+              <option>Masculino</option>
+              <option>Femenino</option>
+              <option>Otro</option>
+            </select>
+            <div class="mb-3 mt-3">
+              <label class="form-label">Email</label>
+              <input type="text" class="form-control" placeholder="ingrese su Email" required>
+              <div class="invalid-feedback">Por favor ingrese el Email.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Contraseña</label>
+              <input type="password" class="form-control" placeholder="Ingrese tu contraseña" required>
+              <div class="invalid-feedback">Por favor ingrese su contraseña.</div>
+            </div>
+              <br>
+              <div class="d-grid">
+                <button class="btn btn-success btn-block" type="submit">
+                  Registrar Veterinario
+                </button>
+                <br>
+                <div class="d-grid">
+                  <a href="HomeAdmin.html" class="btn btn-secondary btn-block">Regresar</a>
+                </div>
+            </div>
+            <br>
+
+          </form>
+        </div>
+      </body>
+</html>
