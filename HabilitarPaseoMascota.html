@@ -24,7 +24,7 @@
 				var opcFormDos = document.forms["formulario"]["opcForm2"];
 				var opcFormTres = document.forms["formulario"]["opcForm3"];
 				if ( !opcFormUno.checked & !opcFormDos.checked & !opcFormTres.checked ) {
-					alert( "Debe seleccionar una Mascota para registrar el paseo " ) ;
+					alert( "Debe seleccionar una Mascota para activar/desactivar el paseo " ) ;
 					return false;
 				}
 				
@@ -34,8 +34,9 @@
 					return false;
 				}			
 				
+
 				else {
-					alert("Se ha activado el paseo!");
+					alert("Se han guardado los cambios!");
 					return true;
 				}	
 				
@@ -57,8 +58,8 @@
 							<form name="formulario" onsubmit="return validarFormulario()" method="post">
 									
 									<br><br>
-									Seleccione tus mascota con las cuales activaras el registro de Paseo:
-									<br>
+									Seleccione a las mascotas con las cuales activara el registro de Paseo si no lo selecciona no se incluira esa mascota en el registro de paseo :
+									<br><br>
 									<input type="radio" name="opcForm1" VALUE="Telefono">Guardin
 									<br>
 									<input type="radio" name="opcForm2" VALUE="Email" >Luna
@@ -72,10 +73,11 @@
 									<br><br>
 									<div class="d-grid">
 			
-									<input class="btn btn-success btn-block" type="submit" value="Habilitar">
-
+									<input class="btn btn-success btn-block" type="submit" value="Guardar cambios">
 									</div>
 									<p></p>
+								
+
 									<div class="d-grid">
 										<a href="HomeCliente.html" type="button" class="btn btn-secondary btn-block">Regresar</a>
 									</div>
