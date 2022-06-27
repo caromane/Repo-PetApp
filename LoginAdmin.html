@@ -14,23 +14,24 @@
       </head>
       <body>
         <div class="container mt-3">  
-          <form class="was-validated">
+          <form class="was-validated" action="./HomeAdmin.html">
             <h4>Iniciar Sesion</h4>
             <img class="img-fluid mx-auto d-block" src="petapp.jpg" alt="petapp">
             <div class="mb-3 mt-3">
               <label class="form-label">Email</label>
-              <input type="text" class="form-control" placeholder="ingresa su Email" required>
+              <input type="text" class="form-control" placeholder="ingresa su Email" minlength="5" maxlength="40" required>
               <div class="invalid-feedback">Por favor ingrese su Email.</div>
             </div>
             <div class="mb-3">
               <label class="form-label">Contraseña</label>
-              <input type="password" class="form-control" placeholder="Ingresa tu contraseña" required>
+              <input type="password" class="form-control" placeholder="Ingresa tu contraseña" minlength="5" maxlength="40" required>
               <div class="invalid-feedback">Por favor ingrese su contraseña.</div>
             </div>
+            <div class="d-grid"><button class="btn btn-success btn-block" type="submit">Ingresar</button></div>
             
-            <div class="d-grid">
+            <!--<div class="d-grid">
               <a href="HomeAdmin.html" type="button" class="btn btn-success btn-block">ingresar</a>
-          </div>
+          </div>-->
           </form>
         </div>
       </body>
