@@ -31,56 +31,46 @@
 				return false;
 			}	
 
-			var nomForm = document.isNaN["formulario"]["comentario"].value;
-			if( nomForm == null || nomForm == "" || nomForm.length == 0 || /^\s+$/.test(nomForm) ) 
-			{  
-				alert("Debe ingregar algún cuidado para la mascota");
-				return false;
-			}
-
-			else {
-				alert("Notificacion creada");
-				return true;
-			}				
+		else {
+			alert("Notificacion creada");
+			return true;
+		}				
 		}
 	</script>
 </head>
 <body>
-	<h2>Registro de Paseo de tu Mascota</h2>
                   <img class="img-fluid mx-auto d-block" src="petapp.jpg" alt="petapp">
                   <div class="mb-3 mt-3">
                     
                   </div>
 
 
-	<h5>Encontramos los siguientes Paseos:</h5>
-    <h6> Haga clic en el paseo para ver el detalle: </h6>
-    <p></p>
+	<h5></h5>
+	<h2>Notificacion Saludable</h2>
 	<div class="mb-3 mt-3">
 
 		<div>
 				<form name="formulario" onsubmit="return validarFormulario()" method="post">
 						
 						Ingrese	el Rut del dueño de la Mascota				
-						<input type="text" name="rut" required>
+						<input class="form-control" type="text" name="rut" required>
 						<br><br>
 						
 						Seleccione la Mascota: 
-						<select name="nombre_mascota">
+						<select class="form-control" name="nombre_mascota">
 							<option value=""> - Selecciona una opción - </option>
-							<option value="1">Mascota 1</option>
-							<option value="2">Mascota 2</option>
-							<option value="3">Mascota 3</option>
+							<option value="1">Guardian</option>
+							<option value="2">Luna</option>
+							<option value="3">Café</option>
 						</select>
 						<br><br>
 						
 						<br><br>
 						Escriba el cuidado para esta Mascota:
 						<br>
-						<textarea name="comentario" rows="5" cols="50" placeholder="Ingrese los cuidados para la mascota" required></textarea>
+						<textarea class="form-control" name="comentario" rows="5" cols="50" placeholder="Ingrese los cuidados para la mascota" required></textarea>
+						<br><br>
 
-					
-						
 						<div class="d-grid">
 						<input class="btn btn-success btn-block" type="submit" value="Enviar">
 						</div>
