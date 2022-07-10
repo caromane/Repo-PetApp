@@ -33,26 +33,29 @@
 
             <fieldset class="grupo">
 
-            <div class="campo">
+            <div class="d-grid">
                 <div class="d-grid">
-                    <label for="sobrenome"><strong>RUT de Dueño</strong></label>
-                    <input type="text" name="sobrenome" id="sobrenome" required></div>
+                    <label class="form-label" for="sobrenome"><strong>RUT de Dueño</strong></label>
+                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" required></div>
                 </div>
+                <br>
                 <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-                <div class="campo">
-                    <label for="senioridade"><strong>Nombre de la Mascota</strong></label>
-                    <select id="senioridade" required>
+                <div class="d-grid">
+                    <label class="form-label" for="senioridade"><strong>Nombre de la Mascota</strong></label>
+                    <select class="form-select" id="senioridade" required>
                       <option selected disabled value="">Seleccione la Mascota</option>
                       <option>opcion 1</option>
                       <option>opcion 2</option>
                       <option>opcion 2</option>
                      
                     </select>
-                 </div>
-                 <div class="campo">
-                    <label for="sobrenome"><strong>Peso</strong></label>
-                    <input type="text" name="sobrenome" id="sobrenome" required>
+                 <br>
                 </div>
+                 <div class="d-grid">
+                    <label class="form-label" for="sobrenome"><strong>Peso</strong></label>
+                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+                <br>
 
                 <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
                
@@ -60,7 +63,7 @@
 
             <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
             <div class="campo">
-                <label><strong>Tipo de Atención</strong></label>
+                <label class="form-label">Tipo de Atención</label>
                 <label>
                     <input type="radio" name="devweb" value="frontend" checked>Urgencia
                 </label>
@@ -74,8 +77,8 @@
 
             <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
             <div class="campo">
-                <label for="senioridade"><strong>Tipo de Mascota</strong></label>
-                <select id="senioridade" required>
+                <label class="form-label" for="senioridade"><strong>Tipo de Mascota</strong></label>
+                <select class="form-select" id="senioridade" required>
                   <option selected disabled value="">Seleccione el tipo de mascota</option>
                   <option>Perro</option>
                   <option>Gato</option>
@@ -88,8 +91,8 @@
                 </select>
              </div>
              <div class="campo">
-                <label for="sobrenome"><strong>Detalle de Consulta</strong></label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
+                <label class="form-label" for="sobrenome"><strong>Detalle de Consulta</strong></label>
+                <input class="form-control" type="text" name="sobrenome" id="sobrenome" required>
             </div>
              
             <br>

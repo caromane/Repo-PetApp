@@ -15,40 +15,33 @@
       <body>
         <div class="container mt-3">  
           <form class="was-validated">
-            <h2>Adopcion de Mascotas</h2>
+            <h2>Solicitar Adopcion</h2>
             <img class="img-fluid mx-auto d-block" src="petapp.jpg" alt="petapp">
             <div class="mb-3 mt-3">
-              <label class="form-label">Nombre Mascota</label>
-              <input type="text" class="form-control" placeholder="ingrese El Nombre de la Mascota" required>
+              <label class="form-label">Nombre Solicitante</label>
+              <input type="text" class="form-control" placeholder="Ingrese su Nombre" required>
               <div class="invalid-feedback">Por favor ingrese El Nombre.</div>
             </div>
-            <div class="mb-3 mt-3">
-              <label class="form-label">Tipo De Mascota</label>
-              <input type="text" class="form-control" placeholder="ingrese El Tipo De Mascota" required>
-              <div class="invalid-feedback">Por favor ingrese el Tipo De Mascota.</div>
-            </div>
-            <div class="mb-3 mt-3">
-              <label class="form-label">Color</label>
-              <input type="text" class="form-control" placeholder="ingrese su Color" required>
-              <div class="invalid-feedback">Por favor ingrese su Color.</div>
-            </div>
+            <div class="mb-3 mt-3"> 
+              <label class="form-label">Mascota a Adoptar</label>
+              <select class="form-select" required>
+                <option selected disabled value="">Seleccione Mascota</option>
+                <option>Toby</option>
+                <option>Michi</option>
+              </select>
+              </div>
             <div class="mb-3 mt-3">
               <label class="form-label">Teléfono de contacto</label>
-              <input type="text" class="form-control" placeholder="ingrese su télefono de contacto" required>
+              <input type="number" class="form-control" placeholder="Ingrese su télefono de contacto" required>
               <div class="invalid-feedback">Por favor ingrese su teléfono de contacto.</div>
             </div>
               <label class="form-label">Ingrese su domicilio</label>
-              <input type="text" class="form-control" placeholder="Direccion" required>
-              <div class="invalid-feedback">Por favor ingrese dirección</div>
-              <br>
-              <div class="form-group">
-                <label for="docs">Foto de tu Mascota</label>
-                <input type="file" name="docs" id="docs" />
-              </div>
+              <input type="text" class="form-control" placeholder="Ingrese su dirección" required>
+              <div class="invalid-feedback">Por favor ingrese su dirección</div>
              <p></p>
              <div class="d-grid">
-              <button class="btn btn-primary btn-block" type="submit" onclick="alert('La publicacion de mascota en adopcion ha sido enviada correctamente');">
-                Publicar mascota en adopcion
+              <button class="btn btn-success btn-block" type="submit" onclick="alert('La solicitud de adopcion ha sido enviada correctamente');">
+                Solicitar adopcion
               </button>
              <p></p>
             <div class="d-grid">
