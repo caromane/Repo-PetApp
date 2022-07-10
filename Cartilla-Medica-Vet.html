@@ -31,12 +31,12 @@
         <!-- Início do formulário -->
         <form>
 
-            <fieldset class="grupo">
+           
 
             <div class="d-grid">
                 <div class="d-grid">
                     <label class="form-label" for="sobrenome"><strong>RUT de Dueño</strong></label>
-                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" required></div>
+                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" placeholder="Ingrese RUT Dueño" required></div>
                 </div>
                 <br>
                 <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
@@ -53,30 +53,30 @@
                 </div>
                  <div class="d-grid">
                     <label class="form-label" for="sobrenome"><strong>Peso</strong></label>
-                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" required>
+                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" placeholder="Ingrese Peso" required>
                 </div>
                 <br>
 
                 <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
                
-            </fieldset> 
+            
 
             <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
             <div class="campo">
-                <label class="form-label">Tipo de Atención</label>
+                <label class="form-label"><strong>Tipo de Consulta</strong></label>
                 <label>
-                    <input type="radio" name="devweb" value="frontend" checked>Urgencia
+                    <input type="radio" name="devweb" value="frontend" checked>  Urgencia
                 </label>
                 <label>
-                    <input type="radio" name="devweb" value="backend">Control
+                    <input type="radio" name="devweb" value="backend">  Control
                 </label>
                 <label>
-                    <input type="radio" name="devweb" value="fullstack">Cirugia
+                    <input type="radio" name="devweb" value="fullstack">  Cirugia
                 </label>
             </div>
 
             <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
-            <div class="campo">
+            <div class="d-grid">
                 <label class="form-label" for="senioridade"><strong>Tipo de Mascota</strong></label>
                 <select class="form-select" id="senioridade" required>
                   <option selected disabled value="">Seleccione el tipo de mascota</option>
@@ -90,9 +90,10 @@
                   <option>Otro</option>
                 </select>
              </div>
-             <div class="campo">
+             <br>
+             <div class="d-grid">
                 <label class="form-label" for="sobrenome"><strong>Detalle de Consulta</strong></label>
-                <input class="form-control" type="text" name="sobrenome" id="sobrenome" required>
+                <input class="form-control" type="text" name="sobrenome" id="sobrenome" placeholder="Ingrese Detalle De Consulta" required>
             </div>
              
             <br>
