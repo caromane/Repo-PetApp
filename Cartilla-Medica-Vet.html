@@ -29,14 +29,14 @@
         </div>
 
         <!-- Início do formulário -->
-        <form>
+        <form id="form1">
 
            
 
             <div class="d-grid">
                 <div class="d-grid">
                     <label class="form-label" for="sobrenome"><strong>RUT de Dueño</strong></label>
-                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" placeholder="Ingrese RUT Dueño" required></div>
+                    <input id="user" class="form-control" type="text" name="sobrenome" placeholder="Ingrese RUT Dueño" required></div>
                 </div>
                 <br>
                 <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
@@ -53,7 +53,7 @@
                 </div>
                  <div class="d-grid">
                     <label class="form-label" for="sobrenome"><strong>Peso</strong></label>
-                    <input class="form-control" type="text" name="sobrenome" id="sobrenome" placeholder="Ingrese Peso" required>
+                    <input id="pass" class="form-control" type="text" name="sobrenome" placeholder="Ingrese Peso" required>
                 </div>
                 <br>
 
@@ -98,16 +98,49 @@
              
             <br>
             <p></p>
-             <div class="d-grid">
-              <button class="btn btn-info btn-block" type="submit" >Registrar cartilla medica
-              </button>
-               </div>
-               <p></p>
+               <div class="d-grid">
+                <button id="btnLogin" class="btn btn-success btn-block" type="submit" >
+                    Registrar cartilla medica
+                </button>
+              </div>
+              <br>
+              <div id="alertSI" class="alert alert-success alert-dismissible fade show" role="alert">Cartilla Medica Registrada Exitosamente</div>
+              <div id="alertNO" class="alert alert-danger" role="alert">Complete los datos</div>
 
                <div class="d-grid">
                 <a href="HomeVeterinario.html" class="btn btn-secondary btn-block">Regresar</a>
               </div>
          </form>
         </div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+ 
+  
+  
+      <script>
+
+      $(document).ready(function() {        
+          $("#alertSI").hide();
+          $("#alertNO").hide();
+        $("#form1").submit(function(e){
+            e.preventDefault();    
+            user = $.trim($("#user").val());
+            pass = $.trim($("#pass").val());
+            if(user.length>0 && pass.length>0){           
+                $("#alertSI").fadeTo(2000, 500).slideUp(500, function() {
+                  $("#alertSI").slideUp(1500);
+                });        
+            }else{
+                $("#alertNO").fadeTo(2000, 500).slideUp(500, function() {
+                  $("#alertNO").slideUp(1500);
+                });
+            }
+            form1.reset();
+            });   
+    });
+      </script>
       </body>
 </html>

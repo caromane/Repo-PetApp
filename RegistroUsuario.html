@@ -14,17 +14,17 @@
       </head>
       <body>
         <div class="container mt-3">  
-          <form class="was-validated">
+          <form id="form1" class="was-validated">
             <h2>Registro de usuario</h2>
             <img class="img-fluid mx-auto d-block" src="logo-sin-eslogan.png" alt="petapp">
             <div class="mb-3 mt-3">
               <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" placeholder="ingrese su Nombre" required>
+              <input id="user" type="text" class="form-control" placeholder="ingrese su Nombre" required>
               <div class="invalid-feedback">Por favor ingrese su Nombre.</div>
             </div>
             <div class="mb-3 mt-3">
               <label class="form-label">RUT</label>
-              <input type="text" class="form-control" placeholder="ingrese su RUT" required>
+              <input id="pass" type="text" class="form-control" placeholder="ingrese su RUT" required>
               <div class="invalid-feedback">Por favor ingrese su RUT.</div>
             </div>
             <div class="mb-3 mt-3"> 
@@ -48,17 +48,50 @@
             </div>
               <br>
               <div class="d-grid">
-                <button class="btn btn-success btn-block" type="submit">
+                <button id="btnLogin" class="btn btn-success btn-block" type="submit" >
                   Registrar Usuario
                 </button>
-                <br>
-                <div class="d-grid">
-                  <a href="Inicio.html" class="btn btn-secondary btn-block">Regresar</a>
-                </div>
+              </div>
+              <br>
+              <div id="alertSI" class="alert alert-success alert-dismissible fade show" role="alert">Usuario Registrado Exitosamente</div>
+              <div id="alertNO" class="alert alert-danger" role="alert">Complete los datos</div>
+              <div class="d-grid">
+                <a href="Inicio.html" class="btn btn-secondary btn-block">Regresar</a>
+              </div>
             </div>
             <br>
 
           </form>
         </div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+ 
+  
+  
+      <script>
+
+      $(document).ready(function() {        
+          $("#alertSI").hide();
+          $("#alertNO").hide();
+        $("#form1").submit(function(e){
+            e.preventDefault();    
+            user = $.trim($("#user").val());
+            pass = $.trim($("#pass").val());
+            if(user.length>0 && pass.length>0){           
+                $("#alertSI").fadeTo(2000, 500).slideUp(500, function() {
+                  $("#alertSI").slideUp(1500);
+                });        
+            }else{
+                $("#alertNO").fadeTo(2000, 500).slideUp(500, function() {
+                  $("#alertNO").slideUp(1500);
+                });
+            }
+            form1.reset();
+            });   
+    });
+      </script>
       </body>
 </html>

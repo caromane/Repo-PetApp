@@ -14,12 +14,12 @@
       </head>
       <body>
         <div class="container mt-3">  
-          <form class="was-validated">
+          <form id="form1" class="was-validated">
             <h2>Solicitar Adopcion</h2>
             <img class="img-fluid mx-auto d-block" src="petapp.jpg" alt="petapp">
             <div class="mb-3 mt-3">
               <label class="form-label">Nombre Solicitante</label>
-              <input type="text" class="form-control" placeholder="Ingrese su Nombre" required>
+              <input id="user" type="text" class="form-control" placeholder="Ingrese su Nombre" required>
               <div class="invalid-feedback">Por favor ingrese El Nombre.</div>
             </div>
             <div class="mb-3 mt-3"> 
@@ -32,23 +32,56 @@
               </div>
             <div class="mb-3 mt-3">
               <label class="form-label">Teléfono de contacto</label>
-              <input type="number" class="form-control" placeholder="Ingrese su télefono de contacto" required>
+              <input id="pass" type="number" class="form-control" placeholder="Ingrese su télefono de contacto" required>
               <div class="invalid-feedback">Por favor ingrese su teléfono de contacto.</div>
             </div>
               <label class="form-label">Ingrese su domicilio</label>
               <input type="text" class="form-control" placeholder="Ingrese su dirección" required>
               <div class="invalid-feedback">Por favor ingrese su dirección</div>
              <p></p>
-             <div class="d-grid">
-              <button class="btn btn-success btn-block" type="submit" onclick="alert('La solicitud de adopcion ha sido enviada correctamente');">
-                Solicitar adopcion
-              </button>
-             <p></p>
+              <div class="d-grid">
+                <button id="btnLogin" class="btn btn-success btn-block" type="submit" >
+                  Solicitar adopcion
+                </button>
+              </div>
+              <br>
+              <div id="alertSI" class="alert alert-success alert-dismissible fade show" role="alert">Solicitud de adopcion enviada correctamente</div>
+              <div id="alertNO" class="alert alert-danger" role="alert">Complete los datos</div> 
             <div class="d-grid">
               <a href="Ver-Mascotas-adopcion.html" type="button" class="btn btn-secondary btn-block">Regresar</a>
             </div>
-<p></p>
+            <p></p>
           </form>
         </div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+ 
+  
+  
+      <script>
+
+      $(document).ready(function() {        
+          $("#alertSI").hide();
+          $("#alertNO").hide();
+        $("#form1").submit(function(e){
+            e.preventDefault();    
+            user = $.trim($("#user").val());
+            pass = $.trim($("#pass").val());
+            if(user.length>0 && pass.length>0){           
+                $("#alertSI").fadeTo(2000, 500).slideUp(500, function() {
+                  $("#alertSI").slideUp(1500);
+                });        
+            }else{
+                $("#alertNO").fadeTo(2000, 500).slideUp(500, function() {
+                  $("#alertNO").slideUp(1500);
+                });
+            }
+            form1.reset();
+            });   
+    });
+      </script>
       </body>
 </html>
